@@ -152,7 +152,7 @@ public final class CassandraDependenciesJob {
 
   public void run() {
     long microsLower = day.toInstant().toEpochMilli() * 1000;
-    long microsUpper = day.plus(Period.ofDays(1)).toInstant().toEpochMilli() * 1000 - 1;
+    long microsUpper = day.plusMinutes(5).toInstant().toEpochMilli() * 1000 - 1;
 
     log.info("Running Dependencies job for {}: {} ≤ Span.timestamp {}", day, microsLower, microsUpper);
     JavaSparkContext sc = new JavaSparkContext(conf);
