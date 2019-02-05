@@ -9,6 +9,8 @@ and stores them for later presentation in the UI. Note that it is needed for the
 This job parses all traces on a given day, based on UTC. By default, it processes the current day,
 but other days can be explicitly specified.
 
+If you a running cassandra, it will only collect 5 minutes of data.
+
 This repository is based on [zipkin-dependencies](https://github.com/openzipkin/zipkin-dependencies).
 
 ## Quick-start
